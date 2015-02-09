@@ -1,17 +1,17 @@
 class Greeter
   def initialize
     @quotes = {
-      "alcohol" => [
+      :alcohol => [
         "Alcohol may be man's worst enemy, but the bible says love your enemy.",
         
       ],
-      "life" => [
+      :life => [
         "The best revenge is massive success.",
         "The big lesson in life, baby, is never be scared of anyone or anything.",
         "I'm gonna live till I die.",
         "Don’t hide your scars. They make you who you are"
       ],
-      "love" => [
+      :love => [
         "....A simple I love you means more than money....",
         "For nobody else, gave me thrill-with all your faults, I love you still. It had to be you, wonderful you, it had to be you.",
       ]
@@ -23,6 +23,7 @@ class Greeter
   end
 
   def quote tag=nil
+    tag = tag.to_sym if tag
     if tag && @quotes[tag]
       @quotes[tag][rand(0...@quotes[tag].size)]
 

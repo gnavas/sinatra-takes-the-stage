@@ -1,6 +1,12 @@
 require 'sinatra'
+require 'better_errors'
 
 require './greeter'
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+end
 
 before do
   @greeter = Greeter.new
