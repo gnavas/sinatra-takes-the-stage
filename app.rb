@@ -1,7 +1,10 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'better_errors'
 
 require './greeter'
+
+also_reload './greeter.rb'
 
 configure :development do
   use BetterErrors::Middleware
@@ -29,5 +32,5 @@ get '/quote' do
 end
 
 get '/photo' do
-  send_file File.expand_path("#{rand(1..4)}.jpg", settings.public_folder)
+  send_file "public/#{rand(1..4)}.jpg"
 end
