@@ -13,7 +13,7 @@ class Greeter
         "The best revenge is massive success.",
         "The big lesson in life, baby, is never be scared of anyone or anything.",
         "I'm gonna live till I die.",
-        "Don’t hide your scars. They make you who you are"
+        "Don't hide your scars. They make you who you are"
       ],
       :love => [
         "....A simple I love you means more than money....",
