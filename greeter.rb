@@ -23,11 +23,11 @@ class Greeter
     
     tag = tag.to_sym if tag
     
-    if tag && @quotes[tag]
+    if tag && quotes[tag]
       quotes[tag][rand(0...quotes[tag].size)]
 
       # this may also be written more simply as:
-      # @quotes[tag].sample
+      # quotes[tag].sample
     else
       "The best is yet to come and won't that be fine."
     end
