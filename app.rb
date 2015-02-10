@@ -1,7 +1,10 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'better_errors'
 
 require './greeter'
+
+also_reload './greeter.rb'
 
 configure :development do
   use BetterErrors::Middleware
