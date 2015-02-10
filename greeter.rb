@@ -7,7 +7,6 @@ class Greeter
     quotes = {
       :alcohol => [
         "Alcohol may be man's worst enemy, but the bible says love your enemy.",
-        
       ],
       :life => [
         "The best revenge is massive success.",
@@ -20,9 +19,9 @@ class Greeter
         "For nobody else, gave me thrill-with all your faults, I love you still. It had to be you, wonderful you, it had to be you."
       ]
     }
-    
+
     tag = tag.to_sym if tag
-    
+
     if tag && quotes[tag]
       quotes[tag][rand(0...quotes[tag].size)]
 
